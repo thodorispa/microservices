@@ -2,6 +2,7 @@ package microservices.cloud.services;
 
 import lombok.extern.slf4j.Slf4j;
 import microservices.cloud.web.model.BeerDto;
+import microservices.cloud.web.model.BeerStyleEnum;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -13,7 +14,7 @@ public class BeerServiceImpl implements BeerService {
     public BeerDto getBeerById(UUID beerId) {
         return BeerDto.builder().id(UUID.randomUUID())
                 .beerName("Galaxy Cat")
-                .beerStyle("Pale Ale")
+                .beerStyle(BeerStyleEnum.IPA)
                 .build();
     }
 
